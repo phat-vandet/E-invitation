@@ -16,17 +16,16 @@
 <body>
 
     <section id="hero"
-        class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+        class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-gray">
         <!-- p for padding, mx-auto for centering horizontally, text-center for centering text, d-flex for making it a flex container, 
          justify-content-center for centering content horizontally, align-items-center for centering content vertically -->
         <main>
-            <h4>To Mister/Miss/Ms./Brother/Sister, </h4>
+            <h4>To Mister President Donal Trump, </h4>
             <h1>Vandet and Kaneka</h1>
             <p>We are pleased to invite you to the wedding of Vandet and Kaneka</p>
-            
-            <!-- Display the countdown timer in an element -->
-            <p id="demo"></p>
 
+            <!-- Display the countdown timer in an element -->
+            <div id="demo" class="countdown d-flex justify-content-center gap-3"></div>
             <a href="#undagan" class="btn btn-primary btn-lg mt-4">View Invitation</a>
         </main>
 
@@ -56,9 +55,24 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result in the element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
+            document.getElementById("demo").innerHTML = `
+                <div class="time-box">
+                    <span>${days}</span>
+                    <small>Days</small>
+                </div>
+                <div class="time-box">
+                    <span>${hours}</span>
+                    <small>Hours</small>
+                </div>
+                <div class="time-box">
+                    <span>${minutes}</span>
+                    <small>Minutes</small>
+                </div>
+                <div class="time-box">
+                    <span>${seconds}</span>
+                    <small>Seconds</small>
+                </div>
+            `;
             // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
