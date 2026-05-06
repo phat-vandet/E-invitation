@@ -20,7 +20,7 @@ body{
     width: 100%; /* Set the width of the pseudo-element to 100% of the hero section */
     height: 100%; /* Set the height of the pseudo-element to 100% of the hero section */
     /* Set the background image for the pseudo-element and ensure it covers the entire area */
-    background: url(img/bieber-wedding-2.webp);
+    background: url(bieber-wedding-2.webp);
     z-index: -1;
      /* Set the z-index of the pseudo-element to -1 to place it behind the content of the hero section */
     background-size: cover; /* Ensure the background image covers the entire area of the pseudo-element */
